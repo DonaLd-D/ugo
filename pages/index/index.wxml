@@ -19,4 +19,26 @@
         </block>
       </swiper>
   </view>
+
+  <view class="menus">
+      <block wx:for="{{navi}}" wx:key="index">
+        <navigator url="{{item.url}}" open-type="{{item.open_type}}">
+          <image src="{{item.image_src}}" mode="aspectFill"></image>
+        </navigator>
+      </block>
+  </view>
+
+  <view class="floor" wx:for="{{floor}}" wx:key="index">
+    <image src="{{item.floor_title.image_src}}" mode="aspectFill"></image>
+    <view class="floor-left">
+      <image src="{{item.product_list[0].image_src}}"></image>
+    </view>
+    <view class="floor-right">
+      <block wx:for="{{item.product_list}}" wx:key="index" wx:if="{{index>0}}">
+        <image src="{{item.image_src}}"></image>
+      </block>
+    </view>
+  </view>
+
+
 </view>
