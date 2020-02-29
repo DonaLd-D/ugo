@@ -1,3 +1,26 @@
 <view class="container">
   <search/>
+
+  <view class="content">
+    <view class="left">
+      <block wx:for="{{list}}" wx:key="index">
+        <view class="leftContent {{current===index? 'active':''}}" 
+        bindtap="leftClick"
+        data-index="{{index}}">
+          {{item.cat_name}}
+        </view>
+      </block>
+    </view>
+
+    <view class="right">
+      <block wx:for="{{}}" wx:key="index">
+        <view>/ 电视 /</view>
+        <view>
+          <block wx:for="{{}}" wx:key="index">
+            <view></view>
+          </block>
+        </view>
+      </block>
+    </view>
+  </view>
 </view>

@@ -1,1 +1,32 @@
-/* pages/category/index.wxss */
+.content{
+  position: fixed;
+  top:100rpx;
+  bottom: 0;
+  display: flex;
+  width: 750rpx;
+  justify-content: space-between;
+}
+
+.left{
+  width: 200rpx;
+  overflow: auto;
+}
+.leftContent{
+  padding: 20rpx 10rpx;
+  background: #eee;
+  text-align: center;
+  position: relative;
+  margin: 1px 1px;
+}
+.active{
+  background: #fff;
+  color:#ff2d4a; 
+}
+.active::before{
+  position: absolute;
+  content: '';
+  top: 26rpx;
+  left: 0;
+  height: 15px;
+  border-left: 2px solid #ff2d4a;
+}
