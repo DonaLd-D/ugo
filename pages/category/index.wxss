@@ -30,3 +30,34 @@
   height: 15px;
   border-left: 2px solid #ff2d4a;
 }
+
+.right{
+  flex:1;
+  overflow: auto;
+}
+.rightTitle{
+  text-align: center;
+}
+
+.rightContent{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: space-between;
+}
+.rightContent navigator{
+  width: 33.3%;
+  height: 160rpx;
+  margin: 20rpx auto;
+  display: flex;
+  flex-direction: column;
+}
+navigator image{
+  width: 120rpx;
+  height: 120rpx;
+  align-self: center;
+}
+navigator text{
+  text-align: center;
+  font-size: 28rpx;
+}

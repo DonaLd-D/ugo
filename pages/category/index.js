@@ -19,7 +19,6 @@ Page({
   },
 
   leftClick(e){
-    console.log(e)
     const {index}=e.currentTarget.dataset
     this.setData({
       current:index

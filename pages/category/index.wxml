@@ -13,11 +13,18 @@
     </view>
 
     <view class="right">
-      <block wx:for="{{}}" wx:key="index">
-        <view>/ 电视 /</view>
-        <view>
-          <block wx:for="{{}}" wx:key="index">
-            <view></view>
+      <block wx:for="{{list[current].children}}" wx:key="index">
+        <view class="rightTitle">/ {{item.cat_name}} /</view>
+
+        <view class="rightContent">
+          <block wx:for="{{item.children}}" 
+                 wx:key="index"
+                 wx:for-item="subItem"
+                 wx:for-index="subIndex">
+            <navigator url="">
+              <image src="{{subItem.cat_icon}}" mode="widthFix"></image>
+              <text>{{subItem.cat_name}}</text>
+            </navigator>
           </block>
         </view>
       </block>
