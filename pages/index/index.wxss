@@ -53,3 +53,31 @@
 .floor+.floor .floor-right image:nth-child(3n+1){
   width: 273rpx;
 }
+
+.toTop{
+  background: #eee;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  bottom:0rpx;
+  right: 8rpx;
+  font-size: 13px;
+  align-items: center;
+}
+.arrow{
+  width: 40rpx;
+  height: 40rpx;
+  border-left: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  transform: rotateZ(135deg);
+  position: absolute;
+  top:20rpx;
+}
+.toTop text{
+  position: absolute;
+  bottom: 15rpx;
+}

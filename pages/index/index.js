@@ -4,7 +4,8 @@ Page({
     data:{
       banners:[],
       navi:[],
-      floor:[]
+      floor:[],
+      isShowTop:false
     },
 
     onLoad(){
@@ -35,5 +36,27 @@ Page({
           floor:message
         })
       })
+    },
+
+    toTop(){
+      wx.pageScrollTo({
+        scrollTop: 0,
+        duration:330
+      })
+    },
+
+    onPageScroll(e){
+      const {scrollTop}=e;
+      let isShow=this.data.isShowTop;
+      if(scrollTop>100){
+        isShow=true
+      }else{
+        isShow=false
+      }
+      if(isShow==this.data.isShowTop)return;
+      this.setData({
+        isShowTop:isShow
+      })
+
     }
 })
