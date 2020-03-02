@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="search">
+    <navigator url="">
+      <view class="searchinput">
+        <icon type="search" size="20px"></icon>
+        <text>{{keyword}}</text>
+      </view>
+    </navigator>
+  </view>
+
+  <view class="tab">
+    <block wx:for="{{tab}}" wx:key="index">
+      <text class="{{current===index? 'active':''}}" 
+            bindtap="tabClick"
+            data-index="{{index}}">{{item}}</text>
+    </block>
+  </view>
+
+  <view class="goodslist">
+    <block>
+      <image class="goodsleft" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1440943184,2145417988&fm=26&gp=0.jpg"></image>
+      <view class="goodsright">
+        <text>娥、嫭、娇、妔、姩、姼、姝、娪、艳、嬽、媛、璧人、粲者、婵娟、长眉、雏鬘、楚邻、绰约、翠袖、翠娥、黛娥</text>
+        <view>￥100.00</view>
+      </view>
+    </block>
+  </view>
+
+</view>
