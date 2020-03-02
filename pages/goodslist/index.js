@@ -8,8 +8,7 @@ Page({
     keyword:'曲面电视',
     pagenum:1,
     goods:[],
-    hasMore:true,
-    loading:true
+    hasMore:true
   },
 
   tabClick(e){
@@ -58,9 +57,12 @@ Page({
   },
 
   onReachBottom(){
-    this.setData({
-      pagenum:this.data.pagenum+1
-    })
-    this.getData()
+    setTimeout(()=>{
+      this.setData({
+        pagenum: this.data.pagenum + 1
+      })
+      this.getData()
+    },1900)
+    
   }
 })
