@@ -1,7 +1,7 @@
+
+
 .content{
-  position: fixed;
-  top:100rpx;
-  bottom: 0;
+  height: 100vh;
   display: flex;
   width: 750rpx;
   justify-content: space-between;
