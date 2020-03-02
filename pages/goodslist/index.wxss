@@ -53,3 +53,10 @@
 .goodsright view{
   color:#ff2d4a;
 }
+
+.tips{
+  font-size: 14px;
+  text-align: center;
+  padding: 20rpx;
+  color: #888;
+}

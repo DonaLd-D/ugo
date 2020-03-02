@@ -26,4 +26,9 @@
     </navigator>
   </view>
 
+  <view class="tips">
+    <text wx:if="{{!hasMore}}">没有数据了</text>
+    <text wx:if="{{hasMore}}">上拉加载</text>
+  </view>
+
 </view>
