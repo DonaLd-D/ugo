@@ -24,7 +24,7 @@
   color:#ff2d4a;
 }
 
-.goodslist{
+.goodslist navigator{
   display: flex;
   justify-content: space-between;
   padding: 20rpx;

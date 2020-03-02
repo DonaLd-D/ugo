@@ -5,7 +5,8 @@ Page({
   data:{
     tab:['综合','销量','价格'],
     current:0,
-    keyword:'曲面电视'
+    keyword:'曲面电视',
+    goods:[],
   },
 
   tabClick(e){
@@ -16,9 +17,9 @@ Page({
   },
 
   onLoad:function(options){
-    this.setData({
-      keyword:options.keyword
-    })
+    // this.setData({
+    //   keyword:options.keyword
+    // })
 
     request({
       url:'/goods/search',
@@ -29,6 +30,9 @@ Page({
       }
     }).then(res=>{
       console.log(res)
+      this.setData({
+        goods:res.data.message.goods
+      })
     })
 
   }
