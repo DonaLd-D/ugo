@@ -1,2 +1,24 @@
-<!--pages/search/index.wxml-->
-<text>pages/search/index.wxml</text>
+<view class="container">
+  <view class="searchinput">
+      <view class="searchleft">
+        <icon type="search" size="20"/>
+        <input placeholder="请输入你想要的商品"></input>
+      </view>
+      <view class="searchright">取消</view>
+  </view>
+
+  <view class="historysearch">
+    <text>历史搜索</text>
+    <icon type="clear" size="20"/>
+  </view>
+
+  <view class="historycontent">
+    <navigator>
+      <text>小米</text>
+    </navigator>
+    <navigator>
+      <text>samsung</text>
+    </navigator>
+  </view>
+
+</view>
