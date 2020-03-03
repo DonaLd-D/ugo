@@ -70,6 +70,13 @@ Page({
     }
   },
 
+  handleclear(){
+    this.setData({
+      history:[]
+    })
+    wx.setStorageSync('history', [])
+  },
+
   handleenter(){
     let arr=wx.getStorageSync('history');
     if(!Array.isArray(arr)){

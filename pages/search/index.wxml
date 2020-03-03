@@ -22,11 +22,12 @@
 
   <view class="historysearch">
     <text>历史搜索</text>
-    <icon type="clear" size="20"/>
+    <icon type="clear" size="20" bindtap="handleclear"/>
   </view>
 
   <view class="historycontent" >
-      <navigator wx:for="{{history}}" wx:key="index">
+      <navigator wx:for="{{history}}" wx:key="index" 
+      url="/pages/goodslist/index?keyword={{item}}">
         <view>{{item}}</view>
       </navigator>
   </view>
