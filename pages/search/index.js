@@ -13,18 +13,42 @@ Page({
     this.setData({
       inputvalue:value
     })
+    this.recommend()
+    
+  },
 
+  recommend(){
     request({
-      url:'/goods/qsearch',
-      data:{
-        query:this.data.inputvalue
+      url: '/goods/qsearch',
+      data: {
+        query: this.data.inputvalue
       }
-    }).then(res=>{
+    }).then(res => {
       console.log(res)
-      const {message}=res.data;
+      const { message } = res.data;
       this.setData({
-        recommendlist:message
+        recommendlist: message
       })
     })
-  }
+  },
+
+  handlecancel(){
+    this.setData({
+      inputvalue:'',
+      recommendlist:[]
+    })
+  },
+
+  handleblur(){
+    this.setData({
+      recommendlist:[]
+    })
+  },
+
+  handlefocus(){
+    if(this.data.inputvalue){
+      this.recommend()
+    }
+  },
+
 })
