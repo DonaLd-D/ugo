@@ -21,7 +21,7 @@
                  wx:key="index"
                  wx:for-item="subItem"
                  wx:for-index="subIndex">
-            <navigator url="../goodslist/index?keyword={{subItem.cat_name}}">
+            <navigator url="/pages/goodslist/index?keyword={{subItem.cat_name}}">
               <image src="{{subItem.cat_icon}}" mode="widthFix"></image>
               <text>{{subItem.cat_name}}</text>
             </navigator>
