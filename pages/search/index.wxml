@@ -2,9 +2,19 @@
   <view class="searchinput">
       <view class="searchleft">
         <icon type="search" size="20"/>
-        <input placeholder="请输入你想要的商品"></input>
+        <input placeholder="请输入你想要的商品"
+               bindinput="handleinput"
+               value="{{inputvalue}}"></input>
       </view>
       <view class="searchright">取消</view>
+  </view>
+
+  <view class="recommendlist" wx:if="{{recommendlist.length}}">
+    <block wx:for="{{recommendlist}}" wx:key="{{index}}">
+      <navigator>
+        <text>{{item.goods_name}}</text>
+      </navigator>
+    </block>
   </view>
 
   <view class="historysearch">

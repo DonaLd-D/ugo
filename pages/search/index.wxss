@@ -23,6 +23,32 @@
   border-radius: 4px;
 }
 
+.recommendlist{
+  background: #fff;
+  border: 1px solid #aaa;
+  border-bottom: 3px solid #aaa;
+  position: absolute;
+  top:98rpx;
+  margin: 0 200rpx 0 20rpx;
+  max-height: 50vh;
+  width: 45vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.recommendlist navigator{
+  margin: 3px;
+  border-bottom: 1px solid #aaa;
+}
+.recommendlist navigator text{
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
 .historysearch{
   display: flex;
   justify-content: space-between;
