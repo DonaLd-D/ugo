@@ -58,11 +58,12 @@
 .historycontent{
   padding: 10rpx 30rpx;
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .historycontent navigator{
   background: #eee;
   padding: 20rpx;
+  margin-bottom: 10rpx;
   margin-right: 40rpx;
   font-size: 13px;
 }

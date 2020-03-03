@@ -6,7 +6,8 @@
                bindinput="handleinput"
                value="{{inputvalue}}"
                bindblur="handleblur"
-               bindfocus="handlefocus"></input>
+               bindfocus="handlefocus"
+               bindconfirm="handleenter"></input>
       </view>
       <view class="searchright" bindtap="handlecancel">取消</view>
   </view>
@@ -24,13 +25,10 @@
     <icon type="clear" size="20"/>
   </view>
 
-  <view class="historycontent">
-    <navigator>
-      <text>小米</text>
-    </navigator>
-    <navigator>
-      <text>samsung</text>
-    </navigator>
+  <view class="historycontent" >
+      <navigator wx:for="{{history}}" wx:key="index">
+        <view>{{item}}</view>
+      </navigator>
   </view>
 
 </view>
