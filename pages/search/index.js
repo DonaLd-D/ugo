@@ -5,6 +5,7 @@ Page({
   data:{
     inputvalue:'',
     recommendlist:[],
+    loading:true,
 
   } ,
 
@@ -18,6 +19,11 @@ Page({
   },
 
   recommend(){
+    if(this.data.loading==false){
+      this.setData({
+        loading:true
+      })
+    }
     request({
       url: '/goods/qsearch',
       data: {
@@ -27,7 +33,8 @@ Page({
       console.log(res)
       const { message } = res.data;
       this.setData({
-        recommendlist: message
+        recommendlist: message,
+        loading:false
       })
     })
   },
