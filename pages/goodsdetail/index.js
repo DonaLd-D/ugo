@@ -3,7 +3,7 @@ Page({
   data: {
     goodsmessage:{},
     current:0,
-
+    urls:[]
   },
 
   onLoad: function (options) {
@@ -15,8 +15,12 @@ Page({
       }).then(res=>{
         console.log(res)
         const {message}=res.data
+        const urls=message.pics.map(v=>{
+          return v.pics_big
+        })
         this.setData({
-          goodsmessage:message
+          goodsmessage:message,
+          urls
         })
       })
   },
@@ -25,6 +29,14 @@ Page({
     const {index}=e.currentTarget.dataset
     this.setData({
       current:index
+    })
+  },
+
+  preview(e){
+    const {index}=e.currentTarget.dataset
+    wx.previewImage({
+      current: this.data.urls[index], 
+      urls: this.data.urls 
     })
   }
 })

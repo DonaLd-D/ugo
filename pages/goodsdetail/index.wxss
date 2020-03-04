@@ -63,6 +63,9 @@
   background: #ff2d4a;
   color:#fff;
 }
+.goodsattrs{
+  min-height: 750rpx;
+}
 
 .goodsbtns{
   display: flex;
