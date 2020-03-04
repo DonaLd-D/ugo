@@ -10,7 +10,6 @@ Page({
   } ,
 
   onLoad(options){
-    console.log(options)
     let arr=wx.getStorageSync("history")
     if(!Array.isArray(arr)){
       arr=[]

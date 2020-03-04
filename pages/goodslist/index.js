@@ -38,7 +38,6 @@ Page({
         pagesize: 10
       }
     }).then(res => {
-      console.log(res)
       const {message}=res.data;
       const goods=message.goods.map(v=>{
         v.goods_price=Number(v.goods_price).toFixed(2)

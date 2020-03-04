@@ -3,18 +3,18 @@
           circular
           indicator-color="rgba(255, 255, 255, .3)"
           indicator-active-color="rgba(255, 255, 255, 1)">
-          <block wx:for="{{3}}" wx:key="index">
+          <block wx:for="{{goodsmessage.pics}}" wx:key="index">
             <swiper-item>
-              <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2612125060,1364303272&fm=26&gp=0.jpg" mode="aspectFill"></image>
+              <image src="{{item.pics_big}}" mode="aspectFill"></image>
             </swiper-item>
           </block>
   </swiper>
 
   <view class="goodsinfo">
-    <view class="goodsprice">￥279</view>
+    <view class="goodsprice">￥{{goodsmessage.goods_price}}</view>
     <view class="goodscollect">
       <view class="left">
-      女人总是要长大的，她也不可能永远的那么单纯或让你保留。
+      {{goodsmessage.goods_name}}
       </view>
       <view class="right">
         <view class="iconfont icon-shoucang"></view>
