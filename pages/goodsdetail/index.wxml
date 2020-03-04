@@ -1,2 +1,39 @@
-<!--pages/goodsdetail/index.wxml-->
-<text>pages/goodsdetail/index.wxml</text>
+<view class="container">
+  <swiper indicator-dots
+          circular
+          indicator-color="rgba(255, 255, 255, .3)"
+          indicator-active-color="rgba(255, 255, 255, 1)">
+          <block wx:for="{{3}}" wx:key="index">
+            <swiper-item>
+              <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3026927718,1375258498&fm=26&gp=0.jpg" mode="aspectFill"></image>
+            </swiper-item>
+          </block>
+  </swiper>
+
+  <view class="goodsinfo">
+    <view>￥279</view>
+    <view>
+      <text>
+      女人总是要长大的，她也不可能永远的那么单纯或让你保留幻想，
+      成熟的女人自有成熟的味道。
+      </text>
+      <view>
+        <view class="iconfont icon-shoucang"></view>
+        <text>收藏</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="goodsbtns">
+    <view>
+      <view class="iconfont icon-kefu"></view>
+      <text>联系客服</text>
+    </view>
+    <view>
+      <view class="iconfont icon-gouwuche"></view>
+      <text>购物车</text>
+    </view>
+    <view>加入购物车</view>
+    <view>立即购买</view>
+  </view>
+</view>
