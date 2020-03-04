@@ -17,7 +17,7 @@
   </view>
 
   <view class="goodslist" wx:for="{{goods}}" wx:key="index">
-    <navigator url="">
+    <navigator url="/pages/goodsdetail/index?id={{item.goods_id}}">
       <image class="goodsleft" src="{{item.goods_small_logo}}"></image>
       <view class="goodsright">
         <text>{{item.goods_name}}</text>
