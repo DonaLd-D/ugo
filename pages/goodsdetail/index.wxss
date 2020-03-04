@@ -1,3 +1,6 @@
+.container{
+  margin-bottom: 100rpx;
+}
 .container swiper{
   height: 750rpx;
   width: 750rpx;
@@ -44,6 +47,23 @@
   font-size: 14px;
 }
 
+.goodstab{
+  width: 750rpx;
+  display: flex;
+  align-items: center;
+}
+.goodstab view{
+  width: 50%;
+  height: 100rpx;
+  margin: 20rpx 10rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.active{
+  background: #ff2d4a;
+  color:#fff;
+}
+
 .goodsbtns{
   display: flex;
   justify-content: space-around;
@@ -53,6 +73,7 @@
   bottom: 0;
   width: 100%;
   height: 100rpx;
+  background: #fff;
 }
 .goodsbtns>view{
   height: 100%;

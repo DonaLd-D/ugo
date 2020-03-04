@@ -2,6 +2,7 @@ import request from '../../utils/request.js'
 Page({
   data: {
     goodsmessage:{},
+    current:0,
 
   },
 
@@ -20,5 +21,10 @@ Page({
       })
   },
 
-  
+  taptap(e){
+    const {index}=e.currentTarget.dataset
+    this.setData({
+      current:index
+    })
+  }
 })

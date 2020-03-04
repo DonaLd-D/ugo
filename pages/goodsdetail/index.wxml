@@ -24,6 +24,24 @@
     <text>快递：免运费</text>
   </view>
 
+  <view class="goodstab">
+    <view wx:for="{{['详情','规格']}}"
+          wx:key="index"
+          class="{{current==index? 'active':''}}"
+          data-index="{{index}}"
+          bindtap="taptap">
+          {{item}}
+    </view>
+  </view>
+  <rich-text nodes="{{goodsmessage.goods_introduce}}"
+             wx:if="{{current==0}}">
+  </rich-text>
+  <view class="goodsattrs" wx:if="{{current==1}}">
+    <block wx:for="{{goodsmessage.attrs}}" wx:key="index">
+      <view>{{item.attr_name}}:{{item.attr_value}}</view>
+    </block>
+  </view>
+
   <view class="goodsbtns">
     <view class="kefu">
       <view class="iconfont icon-kefu"></view>
