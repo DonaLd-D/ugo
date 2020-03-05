@@ -49,13 +49,13 @@
 
   <view class="goodsbtns">
     <view class="contact">
-      <button open-type="contact">打开客服会话窗口</button>
+      <button open-type="contact" size="mini">打开客服会话窗口</button>
     </view>
     <view class="kefu">
       <view class="iconfont icon-kefu"></view>
       <text>联系客服</text>
     </view>
-    <view class="gouwuche">
+    <view class="gouwuche" bindtap="handletocart">
       <view class="iconfont icon-gouwuche"></view>
       <text>购物车</text>
     </view>

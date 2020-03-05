@@ -82,11 +82,14 @@
   height: 100%;
 }
 .contact{
-  flex: 2;
+  width: 150rpx;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
+}
+.contact button{
+  width: 100%;
 }
 .kefu{
   flex: 2;

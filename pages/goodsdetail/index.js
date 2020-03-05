@@ -38,5 +38,11 @@ Page({
       current: this.data.urls[index], 
       urls: this.data.urls 
     })
+  },
+
+  handletocart(){
+    wx.switchTab({
+      url: '/pages/cart/index'
+    })
   }
 })
