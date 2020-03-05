@@ -81,6 +81,13 @@
 .goodsbtns>view{
   height: 100%;
 }
+.contact{
+  flex: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
 .kefu{
   flex: 2;
   display: flex;

@@ -48,6 +48,9 @@
   </view>
 
   <view class="goodsbtns">
+    <view class="contact">
+      <button open-type="contact">打开客服会话窗口</button>
+    </view>
     <view class="kefu">
       <view class="iconfont icon-kefu"></view>
       <text>联系客服</text>
