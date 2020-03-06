@@ -59,7 +59,7 @@
       <view class="iconfont icon-gouwuche"></view>
       <text>购物车</text>
     </view>
-    <view class="add">加入购物车</view>
-    <view class="buy">立即购买</view>
+    <view class="add" bindtap="addgoods">加入购物车</view>
+    <view class="buy" bindtap="addcargo">立即购买</view>
   </view>
 </view>
