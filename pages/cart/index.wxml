@@ -32,9 +32,13 @@
       <view class="goodsprice">
         <view class="price">￥{{item.price}}</view>
         <view class="num">
-          <view>-</view>
+          <view data-index="{{index}}" 
+                data-num="{{-1}}" 
+                bindtap="handlecal">-</view>
           <input type="number" value="{{item.number}}"></input>
-          <view>+</view>
+          <view data-index="{{index}}" 
+                data-num="{{1}}"
+                bindtap="handlecal">+</view>
         </view>
       </view>
     </view>

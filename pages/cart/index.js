@@ -43,7 +43,33 @@ Page({
     this.setData({
       allprice:price
     })
-    wx.setStorageSync('goods', this.data.goods)
+   wx.setStorageSync('goods', this.data.goods)
+  },
+
+  handlecal(e){
+    const {index,num}=e.currentTarget.dataset
+    this.data.goods[index].number+=num
+    if(this.data.goods[index].number==0){
+      wx.showModal({
+        title: '提示',
+        content: '是否要删除宝贝',
+        success:(res)=> {
+          if (res.confirm) {
+            this.data.goods.splice(index,1)
+          } else if(res.cancel){
+            this.data.goods[index].number+=1
+          }
+          this.setData({
+            goods:this.data.goods
+          })
+          this.allPrice()
+        }
+      })
+    }
+    this.setData({
+      goods:this.data.goods
+    })
+    this.allPrice()
   }
 
   
