@@ -2,7 +2,18 @@
 Page({
   data:{
     address:{},
+    goods:[]
+  },
 
+  onLoad:function(){
+    
+  },
+
+  onShow(){
+    const goods = wx.getStorageSync('goods') || [];
+    this.setData({
+      goods
+    })
   },
 
   getAddress(){

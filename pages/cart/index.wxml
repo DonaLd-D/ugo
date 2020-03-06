@@ -22,16 +22,18 @@
     <view class="iconfont icon-dianpu"> 优购生活馆</view>
   </view>
 
-  <view class="goods" wx:for="{{6}}" wx:key="index">
+  <view wx:if="{{goods.length==0}}" class="tips">亲，您还未购买任何商品</view>
+
+  <view class="goods" wx:for="{{goods}}" wx:key="index">
     <icon type="success" size="18" color="red"/>
-    <image src="http://img1.imgtn.bdimg.com/it/u=1970586359,3865781358&fm=26&gp=0.jpg"></image>
+    <image src="{{item.image}}"></image>
     <view class="goodsdetail">
-      <view class="goodsinfo">手机手机手机手机手机手机手机手机手机手机手机手机</view>
+      <view class="goodsinfo">{{item.name}}</view>
       <view class="goodsprice">
-        <view class="price">￥100.00</view>
+        <view class="price">￥{{item.price}}</view>
         <view class="num">
           <view>-</view>
-          <input type="number" value="12"></input>
+          <input type="number" value="{{item.number}}"></input>
           <view>+</view>
         </view>
       </view>
