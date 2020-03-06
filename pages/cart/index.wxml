@@ -1,11 +1,19 @@
 <view class="container">
-  <view class="address">
+  <view class="address" wx:if="{{address.userName}}">
     <view class="addresstop">
-      <view>收货人：苏</view>
-      <view class="addresstel">13535337057</view>
+      <view>收货人：{{address.userName}}</view>
+      <view class="addresstel">{{address.telNumber}}</view>
     </view>
     <view >
-      收货地址：广东省广州市天河区黑马山
+      收货地址：{{address.detail}}
+    </view>
+    <image src="../../images/cart_border@2x.png" mode="aspectFill"></image>
+  </view>
+
+  <view class="address" wx:if="{{!address.userName}}">
+    <view class="addresstop">
+      <view>获取收货地址</view>
+      <view class="addresstel" bindtap="getAddress"></view>
     </view>
     <image src="../../images/cart_border@2x.png" mode="aspectFill"></image>
   </view>
@@ -14,7 +22,7 @@
     <view class="iconfont icon-dianpu"> 优购生活馆</view>
   </view>
 
-  <view class="goods" wx:for="{{6}}" wx:index="index">
+  <view class="goods" wx:for="{{6}}" wx:key="index">
     <icon type="success" size="18" color="red"/>
     <image src="http://img1.imgtn.bdimg.com/it/u=1970586359,3865781358&fm=26&gp=0.jpg"></image>
     <view class="goodsdetail">
