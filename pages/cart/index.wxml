@@ -46,7 +46,7 @@
       <view>全选</view>
     </view>
     <view class="total">
-      <view>合计：<text>￥1880.00</text></view>
+      <view>合计：<text>{{allprice}}</text></view>
       <view class="yunfei">包含运费</view>
     </view>
     <view >结算</view>
