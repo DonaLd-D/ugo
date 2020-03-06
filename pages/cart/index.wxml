@@ -1,2 +1,44 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view class="container">
+  <view class="address">
+    <view class="addresstop">
+      <view>收货人：苏</view>
+      <view class="addresstel">13535337057</view>
+    </view>
+    <view >
+      收货地址：广东省广州市天河区黑马山
+    </view>
+    <image src="../../images/cart_border@2x.png" mode="aspectFill"></image>
+  </view>
+  
+  <view class="middle">
+    <view class="iconfont icon-dianpu"> 优购生活馆</view>
+  </view>
+
+  <view class="goods" wx:for="{{3}}" wx:index="index">
+    <icon type="success" size="20" color="red"/>
+    <image src="http://img1.imgtn.bdimg.com/it/u=1970586359,3865781358&fm=26&gp=0.jpg"></image>
+    <view class="goodsdetail">
+      <view class="goodsinfo">手机手机手机手机手机手机手机手机手机手机手机手机</view>
+      <view class="goodsprice">
+        <view class="price">￥100.00</view>
+        <view class="num">
+          <view>-</view>
+          <input type="number" value="12"></input>
+          <view>+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="jiesuan">
+    <view>
+      <icon type="success" size="20" color="red"/>
+      <view>全选</view>
+    </view>
+    <view>
+      <view>合计：￥1880.00</view>
+      <view>包含运费</view>
+    </view>
+    <view>结算</view>
+  </view>
+</view>

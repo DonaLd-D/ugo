@@ -1,1 +1,94 @@
-/* pages/cart/index.wxss */
+
+.address>view{
+  padding:25rpx 20rpx;
+  font-size: 14px;
+}
+.address>image{
+  height: 15rpx;
+  width: 750rpx;
+  display: block;
+}
+.addresstop{
+  display: flex;
+  justify-content: space-between;
+}
+.addresstel{
+  display: flex;
+  align-items: center;
+}
+.addresstel::after{
+  display: block;
+  width: 8px;
+  height: 8px;
+  content: '';
+  border-top: 1px solid #888;
+  border-right: 1px solid #888;
+  rotate: 45deg;
+  margin-left: 40rpx;
+}
+
+.middle{
+  border-top: 20rpx solid #eee;
+  border-bottom: 1px solid #ddd;
+  height: 60rpx;
+  padding: 20rpx;
+}
+
+.goods{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  align-items: center;
+}
+.goods>image{
+  width: 180rpx;
+  height: 180rpx;
+  margin: 0 20rpx;
+  flex-shrink: 0;
+}
+.goodsdetail{
+  height: 180rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.goodsinfo{
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+.goodsprice{
+  display: flex;
+  justify-content: space-between;
+}
+.price{
+  color:#ff2d4a; 
+}
+.num{
+  display: flex;
+  align-items: center;
+}
+.num>view{
+  width: 40rpx;
+  height: 40rpx;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 40rpx;
+}
+.num>input{
+  width: 100rpx;
+  text-align: center;
+}
+
+.jiesuan{
+  height: 100rpx;
+  width: 750rpx;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
