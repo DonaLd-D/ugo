@@ -1,4 +1,6 @@
-
+.container{
+  padding-bottom: 100rpx;
+}
 .address>view{
   padding:25rpx 20rpx;
   font-size: 14px;
@@ -85,10 +87,39 @@
 .jiesuan{
   height: 100rpx;
   width: 750rpx;
+  border-top: 5px solid #eee;
   background: #fff;
   position: fixed;
   left: 0;
   bottom: 0;
   display: flex;
   justify-content: space-between;
+  font-size: 13px;
+}
+.jiesuan>view{
+  width: 33.33%;
+}
+.allsellect{
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.allsellect view{
+  margin-left: 30rpx;
+}
+.total{
+  line-height: 50rpx;
+}
+.total text{
+  color:#ff2d4a;
+}
+.total .yunfei{
+  color: #888;
+  font-size: 10px;
+}
+.jiesuan >view:nth-child(3){
+  line-height: 100rpx;
+  text-align: center;
+  background: #ff2d4a;
+  color:#fff;
 }

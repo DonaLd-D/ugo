@@ -14,8 +14,8 @@
     <view class="iconfont icon-dianpu"> 优购生活馆</view>
   </view>
 
-  <view class="goods" wx:for="{{3}}" wx:index="index">
-    <icon type="success" size="20" color="red"/>
+  <view class="goods" wx:for="{{6}}" wx:index="index">
+    <icon type="success" size="18" color="red"/>
     <image src="http://img1.imgtn.bdimg.com/it/u=1970586359,3865781358&fm=26&gp=0.jpg"></image>
     <view class="goodsdetail">
       <view class="goodsinfo">手机手机手机手机手机手机手机手机手机手机手机手机</view>
@@ -31,14 +31,14 @@
   </view>
 
   <view class="jiesuan">
-    <view>
-      <icon type="success" size="20" color="red"/>
+    <view class="allsellect">
+      <icon type="success" size="18" color="red"/>
       <view>全选</view>
     </view>
-    <view>
-      <view>合计：￥1880.00</view>
-      <view>包含运费</view>
+    <view class="total">
+      <view>合计：<text>￥1880.00</text></view>
+      <view class="yunfei">包含运费</view>
     </view>
-    <view>结算</view>
+    <view >结算</view>
   </view>
 </view>
