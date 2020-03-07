@@ -66,7 +66,8 @@ Page({
         name: this.data.goodsmessage.goods_name,
         price: this.data.goodsmessage.goods_price,
         id: this.data.goodsmessage.goods_id,
-        number:1
+        number:1,
+        status:true
       })
       wx.showToast({
         title: '加入成功',

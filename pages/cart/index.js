@@ -38,7 +38,9 @@ Page({
   allPrice(){
     let price=0;
     this.data.goods.forEach(v=>{
-      price+=v.price*v.number
+      if(v.status){
+        price+=v.price*v.number
+      }
     })
     this.setData({
       allprice:price
@@ -47,7 +49,8 @@ Page({
   },
 
   handlecal(e){
-    const {index,num}=e.currentTarget.dataset
+    // console.log(e)
+    const {index,num}=e.currentTarget.dataset;
     this.data.goods[index].number+=num
     if(this.data.goods[index].number==0){
       wx.showModal({
@@ -73,6 +76,7 @@ Page({
   },
 
   handleinput(e){
+    // console.log(e)
     const {index}=e.currentTarget.dataset;
     let {value}=e.detail;
     value=Math.floor(Number(value));
@@ -80,6 +84,16 @@ Page({
       value=1;
     }
     this.data.goods[index].number=value;
+    this.setData({
+      goods:this.data.goods
+    })
+    this.allPrice()
+  },
+
+  handlestatus(e){
+    console.log(e)
+    const { index } = e.currentTarget.dataset;
+    this.data.goods[index].status = !this.data.goods[index].status
     this.setData({
       goods:this.data.goods
     })

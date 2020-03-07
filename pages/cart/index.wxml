@@ -25,7 +25,10 @@
   <view wx:if="{{goods.length==0}}" class="tips">亲，您还未购买任何商品</view>
 
   <view class="goods" wx:for="{{goods}}" wx:key="index">
-    <icon type="success" size="18" color="red"/>
+    <icon type="success" size="18" 
+          color="{{item.status? 'red':'gray'}}"
+          bindtap="handlestatus"
+          data-index="{{index}}"/>
     <image src="{{item.image}}"></image>
     <view class="goodsdetail">
       <view class="goodsinfo">{{item.name}}</view>
