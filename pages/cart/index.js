@@ -70,7 +70,21 @@ Page({
       goods:this.data.goods
     })
     this.allPrice()
+  },
+
+  handleinput(e){
+    const {index}=e.currentTarget.dataset;
+    let {value}=e.detail;
+    value=Math.floor(Number(value));
+    if(value<1){
+      value=1;
+    }
+    this.data.goods[index].number=value;
+    this.setData({
+      goods:this.data.goods
+    })
+    this.allPrice()
   }
 
-  
+
 })

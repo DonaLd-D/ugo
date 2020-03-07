@@ -53,6 +53,7 @@
   flex-shrink: 0;
 }
 .goodsdetail{
+  flex: 1;
   height: 180rpx;
   display: flex;
   flex-direction: column;

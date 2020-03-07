@@ -35,7 +35,10 @@
           <view data-index="{{index}}" 
                 data-num="{{-1}}" 
                 bindtap="handlecal">-</view>
-          <input type="number" value="{{item.number}}"></input>
+          <input type="number" 
+                 value="{{item.number}}"
+                 bindblur="handleinput"
+                 data-index="{{index}}"></input>
           <view data-index="{{index}}" 
                 data-num="{{1}}"
                 bindtap="handlecal">+</view>
