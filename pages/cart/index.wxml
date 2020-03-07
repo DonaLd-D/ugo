@@ -52,7 +52,9 @@
 
   <view class="jiesuan">
     <view class="allsellect">
-      <icon type="success" size="18" color="red"/>
+      <icon type="success" size="18" 
+            color="{{allstatus? 'red':'gray'}}"
+            bindtap="handleallstatus"/>
       <view>全选</view>
     </view>
     <view class="total">

@@ -3,7 +3,8 @@ Page({
   data:{
     address:{},
     goods:[],
-    allprice:0
+    allprice:0,
+    allstatus:true
   },
 
   onLoad:function(){
@@ -91,11 +92,38 @@ Page({
   },
 
   handlestatus(e){
-    console.log(e)
+    // console.log(e)
     const { index } = e.currentTarget.dataset;
     this.data.goods[index].status = !this.data.goods[index].status
     this.setData({
       goods:this.data.goods
+    })
+    this.allPrice()
+    this.handleall()
+  },
+
+  handleall(){
+    const status=this.data.goods.some(v=>{
+      return !v.status
+    })
+    // console.log(!status)
+    if(!status==false){
+      this.data.allstatus=false
+    }else{
+      this.data.allstatus=true
+    }
+    this.setData({
+      allstatus:this.data.allstatus
+    })
+  },
+
+  handleallstatus(){
+    this.data.goods.forEach(v=>{
+      v.status=!this.data.allstatus
+    })
+    this.setData({
+      goods:this.data.goods,
+      allstatus:!this.data.allstatus
     })
     this.allPrice()
   }
