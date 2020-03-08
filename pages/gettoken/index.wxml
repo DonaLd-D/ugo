@@ -1,0 +1,6 @@
+<view class="container">
+  <image src="/images/icon_me_active@3x.png"></image>
+  <button type="primary" 
+          open-type="getUserInfo"
+          bindgetuserinfo="getuserinfo">授权</button>
+</view>

@@ -128,11 +128,4 @@
   text-align: center;
   background: #ff2d4a;
   color:#fff;
-  position: relative;
-}
-.jiesuan >view:nth-child(3) navigator{
-  position: absolute;
-  width: 100%;
-  height: 100rpx;
-  opacity: 0;
 }

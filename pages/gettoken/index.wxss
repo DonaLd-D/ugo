@@ -1,0 +1,7 @@
+image{
+  width:400rpx;
+  height:400rpx;
+  margin-top: 100rpx;
+  margin-left:175rpx;
+  background:#07c160; 
+}

@@ -16,7 +16,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.2",
-	"appid": "wx34f2e789825b0756",
+	"appid": "wxfb52f2d7b2f6123a",
 	"projectname": "shop",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -50,8 +50,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/cart/index",
-					"pathName": "pages/cart/index",
+					"name": "pages/gettoken/index",
+					"pathName": "pages/gettoken/index",
 					"query": "",
 					"scene": null
 				},

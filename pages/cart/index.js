@@ -127,7 +127,22 @@ Page({
       allstatus:!this.data.allstatus
     })
     this.allPrice()
-  }
+  },
 
+  handletopay(){
+    if(!this.data.address.userName){
+      wx.showToast({
+        title: '亲，请填写收货信息',
+        image:'/images/icon_me_active@3x.png'
+      })
+    }else if(this.data.allprice!=0){
+          const token=wx.getStorageSync('token')
+          if(!token){
+            wx.navigateTo({
+              url: '/pages/gettoken/index',
+            })
+          }
+    }
+  }
 
 })
