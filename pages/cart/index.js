@@ -1,4 +1,4 @@
-// pages/cart/index.js
+import request from '../../utils/request.js';
 Page({
   data:{
     address:{},
@@ -140,6 +140,51 @@ Page({
           if(!token){
             wx.navigateTo({
               url: '/pages/gettoken/index',
+            })
+          }else{
+            const {address}=this.data;
+            const goods=this.data.goods.map(v=>{
+              return {
+                goods_id:v.id,
+                goods_number:v.number,
+                goods_price:v.price
+              }
+            })
+            request({
+              url:'/my/orders/create',
+              method:'post',
+              header:{
+                Authorization:token
+              },
+              data:{
+                goods,
+                order_price:this.data.allprice,
+                consignee_addr:address.userName+address.telNumber+address.detail
+              }
+            }).then(res=>{
+              // console.log(res)
+              wx.showToast({
+                title: '订单创建成功',
+                type: "success"
+              })
+
+              request({
+                url:'/my/orders/req_unifiedorder',
+                method:'post',
+                header:{
+                  Authorization:token
+                },
+                data:{
+                  order_number:res.data.message.order_number
+                }
+              }).then(res=>{
+                // console.log(res)
+                const {pay}=res.data.message
+                setTimeout(v=>{
+                  wx.requestPayment(pay)
+                },1000)
+                
+              })
             })
           }
     }
