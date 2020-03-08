@@ -6,7 +6,8 @@
     "pages/personal/index",
     "pages/goodslist/index",
     "pages/search/index",
-    "pages/goodsdetail/index"
+    "pages/goodsdetail/index",
+    "pages/order/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",

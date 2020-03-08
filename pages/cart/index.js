@@ -107,13 +107,14 @@ Page({
       return !v.status
     })
     // console.log(!status)
-    if(!status==false){
-      this.data.allstatus=false
-    }else{
-      this.data.allstatus=true
-    }
+    // if(!status==false){
+    //   this.data.allstatus=false
+    // }else{
+    //   this.data.allstatus=true
+    // }
     this.setData({
-      allstatus:this.data.allstatus
+      // allstatus:this.data.allstatus
+      allstatus:!status
     })
   },
 

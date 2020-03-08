@@ -61,6 +61,11 @@
       <view>合计：<text>{{allprice}}</text></view>
       <view class="yunfei">包含运费</view>
     </view>
-    <view >结算</view>
+    <view ><navigator 
+            url="/pages/order/index" 
+            wx:if="{{allprice!=0}}">
+           </navigator>
+           结算
+    </view>
   </view>
 </view>
