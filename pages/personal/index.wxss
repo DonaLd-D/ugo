@@ -1,1 +1,91 @@
-/* pages/personal/index.wxss */
+.container{
+  background: #eee;
+  height: 150vh;
+  position: relative;
+}
+.header{
+  width: 750rpx;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ff2d4a;
+  font-size: 14px;
+  color:#fff;
+}
+.head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head image{
+  width: 150rpx;
+  height: 150rpx;
+  background: #8d3043;
+  border-radius: 50%;
+  margin: 0 60rpx;
+}
+.body{
+  width: 720rpx;
+  margin: 0 15rpx;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 380rpx;
+}
+.collect{
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 15rpx solid #eee;
+  font-size: 13px;
+}
+.collect navigator{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ordertitle{
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.orderitem{
+  display: flex;
+  padding: 20rpx 0;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 15rpx solid #eee;
+  font-size: 13px;
+}
+.orderitem view:nth-child(1){
+  text-align: center;
+}
+.address{
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 15rpx solid #eee;
+}
+.address .right::after{
+  display: block;
+  content:'';
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #888;
+  border-right: 1px solid #888;
+  rotate: 45deg;
+}
+.contact{
+  border-bottom: 15rpx solid #eee;
+}
+.contact navigator{
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}

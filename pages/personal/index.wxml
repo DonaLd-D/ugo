@@ -1,2 +1,49 @@
-<!--pages/personal/index.wxml-->
-<text>pages/personal/index.wxml</text>
+<view class='container'>
+  <view class="header">
+    <view class="head">
+      <view class="iconfont icon-icon3"></view>
+      <navigator url="">
+        <image src="http://img3.imgtn.bdimg.com/it/u=1533257359,1286000012&fm=11&gp=0.jpg"></image>
+      </navigator>
+      <view class="iconfont icon-icon3"></view>
+    </view>
+    <view>轻松登录/注册</view>
+  </view>
+
+  <view class="body">
+    <view class="collect" >
+      <block wx:for="{{collect}}" wx:key="index">
+        <navigator>
+          <view>0</view>
+          <view>{{item}}</view>
+        </navigator>
+      </block>
+    </view>
+
+    <view class="order">
+      <view class="ordertitle">我的订单</view>
+      <view class="orderitem">
+        <block wx:for="{{4}}" wx:key="index">
+          <navigator >
+            <view class="iconfont icon-icon3"></view>
+            <view>待付款</view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+
+    <view class="address">
+      <view>收货地址管理</view>
+      <view class="right"></view>
+    </view>
+
+    <view class="contact">
+      <block wx:for="{{5}}" wx:key="index">
+      <navigator>
+        <view>联系客服</view>
+        <view>400-618-4000</view>
+      </navigator>
+      </block>
+    </view>
+  </view>
+</view>

@@ -13,7 +13,7 @@ Page({
           goods_id:options.id
         }
       }).then(res=>{
-        console.log(res)
+        // console.log(res)
         const {message}=res.data
         const urls=message.pics.map(v=>{
           return v.pics_big
