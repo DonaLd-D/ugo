@@ -1,13 +1,13 @@
 <view class='container'>
   <view class="header">
     <view class="head">
-      <view class="iconfont icon-icon3"></view>
+      <view class="iconfont icon-icon_set_up"></view>
       <navigator url="">
-        <image src="http://img3.imgtn.bdimg.com/it/u=1533257359,1286000012&fm=11&gp=0.jpg"></image>
+        <open-data type="userAvatarUrl"></open-data>
       </navigator>
-      <view class="iconfont icon-icon3"></view>
+      <view class="iconfont icon-dakaihuihua"></view>
     </view>
-    <view>轻松登录/注册</view>
+    <view><open-data type="userNickName"></open-data></view>
   </view>
 
   <view class="body">
@@ -23,27 +23,33 @@
     <view class="order">
       <view class="ordertitle">我的订单</view>
       <view class="orderitem">
-        <block wx:for="{{4}}" wx:key="index">
+        <block wx:for="{{order}}" wx:key="index">
           <navigator >
-            <view class="iconfont icon-icon3"></view>
-            <view>待付款</view>
+            <view class="iconfont icon-{{item.icon}}"></view>
+            <view>{{item.text}}</view>
           </navigator>
-        </block>
+        </block>  
       </view>
     </view>
 
     <view class="address">
       <view>收货地址管理</view>
-      <view class="right"></view>
+      <view class="right" bindtap="handleaddress"></view>
     </view>
 
     <view class="contact">
-      <block wx:for="{{5}}" wx:key="index">
       <navigator>
         <view>联系客服</view>
-        <view>400-618-4000</view>
+        <view bindtap="handlecall">400-618-4000</view>
       </navigator>
-      </block>
+      <navigator>
+        <view>意见反馈</view>
+        <view class="right"></view>
+      </navigator>
+      <navigator>
+        <view>意见反馈</view>
+        <view class="right"></view>
+      </navigator>
     </view>
   </view>
 </view>

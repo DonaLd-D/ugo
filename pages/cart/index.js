@@ -135,7 +135,12 @@ Page({
         title: '亲，请填写收货信息',
         image:'/images/icon_me_active@3x.png'
       })
-    }else if(this.data.allprice!=0){
+    }else if(this.data.allprice==0){
+      wx.showToast({
+        title: '亲，请选择商品',
+        image: '/images/icon_me_active@3x.png'
+      })
+    }else{
           const token=wx.getStorageSync('token')
           if(!token){
             wx.navigateTo({
@@ -178,7 +183,7 @@ Page({
                   order_number:res.data.message.order_number
                 }
               }).then(res=>{
-                // console.log(res)
+                console.log(res)
                 const {pay}=res.data.message
                 setTimeout(v=>{
                   wx.requestPayment(pay)
